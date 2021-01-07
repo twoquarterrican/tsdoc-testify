@@ -6,10 +6,11 @@ export function wrapTestFunction(
 ): ts.Statement {
   const functionName = ts.createIdentifier("test");
   const caseName = ts.createStringLiteral(name);
+  const asyncKw = ts.createModifier(ts.SyntaxKind.AsyncKeyword);
   const blockExpr = ts.createBlock(body);
 
   const testBody = ts.createArrowFunction(
-    undefined,
+    [asyncKw],
     undefined,
     undefined,
     undefined,

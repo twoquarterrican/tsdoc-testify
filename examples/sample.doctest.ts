@@ -2,19 +2,19 @@
 
 import * as assert from "assert";
 import { sum, sub, Duck } from "./sample";
-test("/Users/akito/workspace/tsdoc-testify/examples/sample.ts_0", () => {
+test("/Users/akito/workspace/tsdoc-testify/examples/sample.ts_0", async () => {
   assert.equal(sum(2, 1), 3);
 });
-test("customTag", () => {
+test("customTag", async () => {
   assert.equal(sum(4, 5), 9);
 });
-test("custom name here", () => {
+test("custom name here", async () => {
   assert.equal(sub(2, 1), 1);
 });
-test("/Users/akito/workspace/tsdoc-testify/examples/sample.ts_1", () => {
+test("/Users/akito/workspace/tsdoc-testify/examples/sample.ts_1", async () => {
   assert.equal(sub(4, 5), -1);
 });
-test("class method example", () => {
+test("class method example", async () => {
   const duck = new Duck();
   assert.equal(duck.quack(), "quack");
 });
